@@ -1,5 +1,5 @@
 /* 
-Ejercicio #1 Logica de programacion
+Ejercicio #2 Logica de programacion
 */
 function celciusFahrenheit(celcius){
     return (celcius*1.8)+32;
