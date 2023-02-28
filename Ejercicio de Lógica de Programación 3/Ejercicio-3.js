@@ -22,6 +22,8 @@ const calculoFactorial = (numero) => {
 }
 return factorial;
 }
+//asignando div de html
+let resultado=document.getElementById("resultado");
 //Mostrando resultado
 //consola
 console.log("El factorial de "+numero+" es : "+calculoFactorial(numero));
@@ -29,3 +31,5 @@ console.log("El factorial de "+numero+" es : "+calculoFactorial(numero));
 localStorage.setItem("factorial",calculoFactorial(numero));
 //alert
 alert("El factorial de "+numero+" es : "+calculoFactorial(numero));
+//html
+resultado.innerHTML="El factorial de "+numero+" es : "+calculoFactorial(numero);

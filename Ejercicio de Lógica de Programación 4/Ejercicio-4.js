@@ -36,6 +36,8 @@ const calculoFibonacci = (numero) => {
     }
     return fibonacci;
 }
+//asignando div de html
+let resultadohtml=document.getElementById("resultado");
 //Mostrando resultado
 //consola
 let resultado=calculoFibonacci(numero);
@@ -44,3 +46,5 @@ console.log("La serie fibonacci de "+numero+" es : "+resultado);
 localStorage.setItem("fibonacci",calculoFibonacci(numero));
 //alert
 alert("La serie fibonacci de "+numero+" es : "+calculoFibonacci(numero));
+//html
+resultadohtml.innerHTML="La serie fibonacci de "+numero+" es : "+calculoFibonacci(numero);
