@@ -26,14 +26,27 @@ public class Ejercicio10 {
         diccionario.put("regla", "ruler");
         diccionario.put("cuaderno", "notebook");
         Scanner sc = new Scanner(System.in);
-        System.out.println("Introduce una palabra en español: ");
-        String palabra = sc.nextLine();
-        sc.close();
-        // Comprobamos si la palabra está en el diccionario
-        if (diccionario.containsKey(palabra)) {
-            System.out.println("La traducción de " + palabra + " es " + diccionario.get(palabra));
-        } else {
-            System.out.println("La palabra " + palabra + " no está en el diccionario");
+        int correcto = 0;
+        int incorrecto = 0;
+        for (int i = 0; i < 5; i++) {
+            // Selecciona una palabra aleatoria del diccionario
+            int random = (int) (Math.random() * diccionario.size());
+            String palabra = (String) diccionario.keySet().toArray()[random];
+            System.out.println("Traduce la palabra " + palabra);
+            String traduccion = sc.nextLine().toLowerCase();
+            // Comprueba si la traducción es correcta
+            if (traduccion.equals(diccionario.get(palabra))) {
+                System.out.println("Correcto");
+                correcto++;
+            } else {
+                System.out.println("Incorrecto");
+                incorrecto++;
+                System.out.println("La traducción correcta es " + diccionario.get(palabra));
+            }
+
         }
+        sc.close();
+        System.out.println("Has acertado " + correcto + " palabras");
+        System.out.println("Has fallado " + incorrecto + " palabras");
     }
 }
