@@ -55,8 +55,28 @@ public class Ejercicio7 {
             } else {
                 resultado += (15 - hora) * 60;
             }
-            resultado += minutos;
+            resultado -= minutos;
         }
         return resultado;
     }
+
+    // Testing
+    // lunes 10:00
+    // 4*24*60 = 5760
+    // 15-10 = 5
+    // 5*60 = 300
+    // total = 6060
+    // lunes 16:00
+    // 4*24*60 = 5760
+    // 16-15 = 1
+    // 1*60 = 60
+    // total = 5820
+
+    // lunes 14:30
+    // 4*24*60 = 5760
+    // 15-14 = 1
+    // 1*60 = 60
+    // 60-30 = 30
+    // total = 5790
+
 }
